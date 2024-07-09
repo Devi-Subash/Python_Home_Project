@@ -195,7 +195,6 @@ print(my_list)
 print(min_dict)
 print(max_dict)
 
-'''
 
 # 17. write a python program to create a dictionary from a string and track the count of letters from the string
 
@@ -203,7 +202,140 @@ user_input = str(input("Enter the string to "))
 
 my_list2 = []
 my_list2.extend(user_input)
+out_put_dict = {}
 for i in my_list2:
+    if i in out_put_dict:
+        out_put_dict[i] += 1
+    else:
+        out_put_dict[i] = 1
+print(out_put_dict)
 
 
-print(my_list2)
+# 18. Write a Python program to get a string made of the first 2 and last 2 characters of a given string.
+# If the string length is less than 2, return the empty string instead.
+# Sample String : 'w3resource'
+# Expected Result : 'w3ce'
+# Sample String : 'w3w'
+# Expected Result : 'w3w3'
+# Sample String : 'w3'
+# Expected Result : 'w3w3'
+
+input_var = str(input("Enter the string value: "))
+l = len(input_var)
+if l < 2:
+    print("Entered string is too short")
+elif l == 2:
+    print(input_var[0:2] + input_var[0:2])
+elif l == 3:
+    print(input_var[0:] + input_var[0])
+else:
+    # print(input_var[0]+input_var[1]+input_var[l-2]+input_var[l-1])
+    print(input_var[0:2]+input_var[-2:])
+
+
+# 19. Write a Python program to get a single string from two given strings,
+# separated by a space and interchange the first and second string,
+# swap the first two characters of each string.
+# Sample String : 'abc', 'xyz'
+# Expected Result : 'xyc abz'
+
+
+
+input_var1 = str(input("Enter the string value: "))
+temp1 = input_var1
+input_var2 = str(input("Enter the string value: "))
+temp2 = input_var2
+
+print(input_var1[0:-1]+input_var2[-1]+" "+input_var2[0:-1]+input_var1[-1])
+
+
+# 20. Write a Python program to get a string from a given string where all occurrences of its first char have been changed to '$', except the first char itself.
+# Sample String : 'restart'
+# Expected Result : 'resta$t'
+
+input_var1 = str(input("Enter the string value:"))
+char = input_var1[0]
+print(char)
+input_var1 =input_var1.replace(char,'$')
+print(char+input_var1[1:])
+
+
+
+# 21. Write a Python program to add 'ing' at the end of a given string (length should be at least 3). If the given string already ends with 'ing', add 'ly' instead. If the string length of the given string is less than 3, leave it unchanged.
+# Sample String : 'abc'
+# Expected Result : 'abcing'
+# Sample String : 'string'
+# Expected Result : 'stringly'
+
+input_var = str(input("Enter the string value: "))
+l = len(input_var)
+if l < 3:
+    print("Entered string is too short")
+else:
+    if input_var[-3:] == "ing":
+        print(input_var+"ly")
+    else:
+        print(input_var + "ing")
+
+
+# 22. Write a Python program to find the first appearance of the substrings 'not' and 'poor' in a given string.
+# If 'not' follows 'poor', replace the whole 'not'...'poor' substring with 'good'. Return the resulting string.
+# Sample String : 'The lyrics is not that poor!'
+# 'The lyrics is that poor!'
+# Expected Result : 'The lyrics is good!'
+# 'The lyrics is poor!'
+
+input_var = "I am not a bad boy" #"I am a good girl"
+
+not_string = input_var.find('not')
+good_string = input_var.find("good")
+if not_string != -1:
+    print(input_var[0:not_string]+input_var[not_string+4:])
+elif good_string != -1:
+    print((input_var[0:good_string]+"poor"+input_var[good_string+4:]))
+else:
+    print(input_var)
+
+# 23. Write a Python function that takes a list of words and return the longest word and the length of the longest one.
+# Sample Output:
+# Longest word: Exercises
+# Length of the longest word: 9
+
+n = 0
+length = 0
+add_new_word = "Y"
+while add_new_word.upper() == "Y":
+    words = str(input("Enter the string value : "))
+    add_new_word = str(input("Do you want to add a new word (Y or N) : "))
+    length = len(words)
+    if n < length:
+        n = length
+        l_word = words
+print("The longest word is ", l_word)
+print("The length of the longest word is ", n)
+
+
+# 24. Write a Python program to remove the nth index character from a nonempty string.
+
+my_list = []
+i = 0
+words = str(input("Enter the string value : "))
+index = int(input("Enter the index value which needs to be removed: "))
+str.
+my_list.append(words)
+for i in my_list:
+
+'''
+demo_string = "sample pYathaona"
+print(demo_string)
+demo_string1 = demo_string.find('a')
+print(demo_string1)
+
+
+
+
+
+
+
+
+
