@@ -315,21 +315,58 @@ print("The longest word is ", l_word)
 print("The length of the longest word is ", n)
 
 
-# 24. Write a Python program to remove the nth index character from a nonempty string.
+# 24. Write a Python program to count the occurrences of each word in a given sentence.
+my_string = "This is my house. I love my house. I live in my house."
+num = my_string.count('house')
+print(f"The word house is displayed {num}")
 
-my_list = []
-i = 0
+
+# 25. Write a Python program to remove the nth index character from a nonempty string.
+
+
 words = str(input("Enter the string value : "))
-index = int(input("Enter the index value which needs to be removed: "))
-str.
-my_list.append(words)
-for i in my_list:
+index = int(input("Enter the index value \"nth value\" which needs to be removed: "))
+print(words[:index]+words[index+1:])
+
+
+# 26. Write a Python program to change a given string to a new string where the 1st and last chars have been exchanged.
+
+words = str(input("Enter the string value : "))
+
+print(words[-1]+words[1:-1]+words[0])
+
+# 27. Write a Python program to remove characters that have odd index values in a given string.
+
+words = str(input("Enter the string value : "))
+i = 0
+result = ""
+for i in range(len(words)):
+    if i % 2 == 0:
+        result = result + words[i]
+print(result)
+
+
+# 28. Write a Python program to count the occurrences of each word in a given sentence.
+count = 0
+sentence = "extreme tornadoes creates extreme deveastion and destruction for human lives"
+my_dict = dict()
+words = sentence.split()
+print(words)
+for char in words:
+    print(char)
+    if char in my_dict:
+        my_dict[char] += 1
+        #my_dict = {char, count}
+        print(my_dict)
+    else:
+        my_dict[char] = 1
+        #my_dict = {char, count}
+        print(my_dict)
+print("\n\n*****", my_dict)
 
 '''
-demo_string = "sample pYathaona"
-print(demo_string)
-demo_string1 = demo_string.find('a')
-print(demo_string1)
+
+
 
 
 
