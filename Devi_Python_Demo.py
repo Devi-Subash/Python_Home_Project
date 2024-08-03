@@ -3,7 +3,7 @@ this_list = ["apple", "banana", "cherry"]
 my_list = ["A", "B", "C", "D" ]
 my_tuple = ( 1, 2, 3, 4, 5)
 my_set = {"a", "b", "c", "d"}
-'''
+
 # print(this_list)
 # print(len(this_list))
 # this_list.insert(2, my_tuple)  # this will insert
@@ -20,21 +20,20 @@ my_set = {"a", "b", "c", "d"}
 # this_list.sort(reverse=True)
 # this_list.reverse()
 
-
-
-
-
-
-
-
-'''
 # 1. Program to find the smallest number in a given list.
-my_list = [ 5, 1, 2, 3, 5]
-min = my_list[0]
-for a in my_list:
-    if a < min:
-        min = a
-print (min)
+
+
+def my_function_min (devi_list):
+    min_val = devi_list[0]
+    for a in devi_list:
+        if a < min_val:
+            min_val = a
+    print([min_val])
+    
+
+devi_list = [5, 1, 2, 3, 5]
+my_function_min(devi_list)
+
 
 # 2. Write a program to print a specified list after removing [0],[4]&[5] elements.
 
@@ -87,7 +86,6 @@ result_list = []
 for x in my_set:
     if x % 2 != 0:
         result_list.append(x)
-
 print(result_list)
 
 # 8. write a program to split a list every nth element [4]
@@ -165,15 +163,17 @@ for i in range(1,num+1):
     new_dict.update({i:i*i})
 print(new_dict)
 
+
 # 15. write a python program to sort a given dictionary by key
 
 my_dict = {"red": 234, "blue": 939, "yellow": 567, "pink": 453, "orange": 231}
 sorted_dict = {}
 my_list = list(my_dict)
+print(my_list)
 sort_list = sorted(my_list)
 print(sort_list)
 for i in sort_list:
-    sorted_dict = {i : my_dict[i]}
+    sorted_dict = {i: my_dict[i]}
     print(sorted_dict)
 
 #*************************************************************
@@ -364,7 +364,118 @@ for char in words:
         print(my_dict)
 print("\n\n*****", my_dict)
 
+
+# 29. Write a Python script that takes input from the user and displays that input back in upper and lower cases.
+
+my_list = []
+string = "Devi"
+
+my_list.extend(string)
+
+print(my_list)
+print(*my_list)
+
+
+
+# 30. Write a Python program to count the number of characters (character frequency) in a string.
+# Sample String : 'google.com'
+# Expected Result : {'g': 2, 'o': 3, 'l': 1, 'e': 1, '.': 1, 'c': 1, 'm': 1}
+
+my_dict = {}
+sample_string = "google.com"
+for i in sample_string:
+    if i in my_dict:
+        my_dict[i] += 1
+    else:
+        my_dict[i] = 1
+print (f"The count of {sample_string} is \n{my_dict}")
+
+
+# 31. Write a Python program to calculate the length of a given string.
+
+string_1 = 'devisubash'
+
+print(len(string_1))
+
+
+# 32. Write a Python program to count the number of characters (character frequency) in a string.
+# Sample String : 'google.com'
+# Expected Result : {'g': 2, 'o': 3, 'l': 1, 'e': 1, '.': 1, 'c': 1, 'm': 1}
+
+
+string1 = 'google.com'
+final_result = {}
+
+for i in string1:
+    if i in final_result:
+        final_result[i] += 1
+    else:
+        final_result[i] = 1
+
+print(f"The count of {string1} is \n{final_result}")
+
+# for item, values in final_result.items():
+#     print(item, ':', values)
+
+
+
+# 33. Write a Python program to get a string from a given string
+# where all occurrences of its first char have been changed to '$',
+# except the first char itself.
+# Sample String : 'restarter'
+# Expected Result : 'resta$te$'
+
+
+string_1 = 'restarter'
+temp = string_1[0]
+final_string = ''
+for i in string_1:
+    if i == temp:
+        final_string = string_1.replace(i, '$')
+print(temp + final_string[1:])
+
+
+
+# 34. Write a Python function that takes a list of words and return the longest word and the length of the longest one.
+# Sample Output:
+# Longest word: Exercises
+# Length of the longest word: 9
+
+
+def fun_longest_word(my_list):
+    my_final_list = sorted(my_list, key=len)
+    print(my_final_list)
+    print((my_final_list[-1],len(my_final_list[-1])))
+
+
+my_list = ['devi', 'subash', 'snithik']
+fun_longest_word(my_list)
+
+
+
+
+# 35. Write a Python program using functions to remove the nth index character using input function.
+
+num_nth = int(input("Enter the nth value: "))
+str_input = str(input("Enter the string value :"))
+temp = len(str_input)
+while temp <= num_nth:
+    print("The nth value is wrong.")
+    num_nth = int(input("Please renter the nth value: "))
+
+print(str_input[:num_nth-1]+str_input[num_nth:])
+
 '''
+
+
+
+
+
+
+
+
+
+
 
 
 
