@@ -15,4 +15,3 @@ def parse_numbers_list(numbers):
     return ret
 
 
-print("The final output", parse_numbers_list("254,3-7,9"))
